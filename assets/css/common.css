@@ -338,9 +338,9 @@ footer{
     .legals, .hips{
         display: none;
     }
-    .inactive{
+    /* .inactive{
         border-bottom: 2px solid #b1acff;
-    }
+    } */
     .yellow_footer{
         display: block;
         display: flex;

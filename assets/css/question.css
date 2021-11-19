@@ -67,6 +67,7 @@ button:active{
 }
 .q1_right,.q2_right,.q3_right,.q4_right,.q5_right,.q6_right,.q7_right,.q8_right,.q9_right,.q10_right,.q11_right{
     width: 50%;
+    cursor: pointer;
 }
 .q1_right_mob{
     display: none;
@@ -87,10 +88,10 @@ button:active{
     align-items: center;
 }
 .q1_row:first-child .q1_item:first-child img{
-    width: 25px;
+    width: 35px;
 }
 .q1_item img{
-    width: 37px;
+    width: 35px;
 }
 .q1_item p{
     font-weight: 500;
@@ -143,7 +144,7 @@ button:active{
     height: 5px;
 	margin-top: 30px;
     opacity: 1;
-    margin-top: -30px;
+    margin-top: -11px;
 }
 .myslider::-webkit-slider-thumb {
     -webkit-appearance: none;

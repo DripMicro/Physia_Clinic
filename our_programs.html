@@ -154,87 +154,55 @@
 
     <!-- programs section start -->
     <section class="programs">
-        <div class="programs_main">
-            <div class="programs_content">
-                <div class="program_1">
-                    <div class="program_img program_img1">
-                        <span class="program_link">Lower Back</span>
-                        <img src="assets/images/program1.png">
-                    </div>
-                    <div class="program_right">
-                        <div class="right_container">
-                            <p class="program_title">Lower Back</p>
-                            <p class="program_text">Highly effective with all lower back pain problems such as:</p>
-                            <ul>
-                                <li>Prolapsed (herniated) disk</li>
-                                <li>Spondylitis</li>
-                                <li>Spondylosis</li>
-                                <li>Spondylolisthesis / Retrolisthesis</li>
-                                <li>Spinal stenosis</li>
-                                <li>Sacroiliac Joint Misalignment</li>
-                                <li>Spinal Arthritis</li>
-                                <li>Lumbar radiculopathy and more.</li>
-                            </ul>
-                            <p class="program_mem">From $100/ month.</p>
+        <div class="container">
+            
+            <div class="programs_main">
+                <p class="programs_title">Our physiotherapy programs</p>
+                <div class="programs_content">
+                    <div class="program_1">
+                        <div class="program_img program_img1">
+                            <img src="assets/images/program1.png">
                         </div>
-                        <button>Learn more</button>
+                        <div class="program_right">
+                            <div class="right_container">
+                                <p class="program_title">Lower Back</p>
+                                <p class="program_text">Lower back problems are as common as they are exhausting. Luckily, Physia Clinic is here to help.</p>
+                                <p class="program_mem">From $100/ month.</p>
+                                <button>Learn more</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="program_2">
+                        <div class="program_img2 program_right mobile">
+                            <img src="assets/images/program2.png">
+                        </div>
+                        <div class="program_img">
+                            <div class="right_container">
+                                <p class="program_title">Neck</p>
+                                <p class="program_text">Neck problems are a pain...in the neck. Thanks to Physia Clinic, this pain will be gone in no time.</p>
+                                <button>Coming Soon</button>
+                            </div>
+                        </div>
+                        <div class="program_img2 program_right window">
+                            <img src="assets/images/program2.png">
+                        </div>
+                        
+                    </div>
+                    <div class="program_3">
+                        <div class="program_img program_img3">
+                            <img src="assets/images/program3.png">
+                        </div>
+                        <div class="program_right">
+                            <div class="right_container">
+                                <p class="program_title">Hips</p>
+                                <p class="program_text">The hip is one of the body’s biggest joint. It’s also fundamental to your overall mobility. With Physia Clinic you’ll get your hips moving.</p>
+                                <button>Coming Soon</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="program_2">
-                    <div class="program_img program_img2">
-                        <span class="program_link">Neck</span>
-                        <img src="assets/images/program2.png">
-                    </div>
-                    <div class="program_right">
-                        <div class="right_container">
-                            <p class="program_title">Neck</p>
-                            <p class="program_text">Proven benefits for a variety of hips problems such as:</p>
-                            <ul>
-                                <li>Pre- / post-hip replacement recovery protocol</li>
-                                <li>Femoroacetabular impingement (FAI)</li>
-                                <li>Hip Labral Tear</li>
-                                <li>Hip dysplasia</li>
-                                <li>Snapping hip syndrome (SHS)</li>
-                                <li>Hip subluxation</li>
-                                <li>Degenerative osteoarthritis of the hip joint (coxarthrosis)</li>
-                                <li>Trochanteric bursitis and more.</li>
-                            </ul>
-                            <p class="program_mem">From $100/ month.</p>
-                            
-                        </div>
-                        <button>Coming Soon</button>
-                    </div>
-                </div>
-                <div class="program_3">
-                    <div class="program_img program_img3">
-                        <span class="program_link">Hips</span>
-                        <img src="assets/images/program3.png">
-                    </div>
-                    <div class="program_right">
-                        <div class="right_container">
-                            <p class="program_title">Hips</p>
-                            <p class="program_text">Proven benefits for a variety of hips problems such as:</p>
-                            <ul>
-                                <li>Pre- / post-hip replacement recovery protocol</li>
-                                <li>Femoroacetabular impingement (FAI)</li>
-                                <li>Hip Labral Tear</li>
-                                <li>Hip dysplasia</li>
-                                <li>Snapping hip syndrome (SHS)</li>
-                                <li>Hip subluxation</li>
-                                <li>Degenerative osteoarthritis of the hip joint (coxarthrosis)</li>
-                                <li>Trochanteric bursitis and more.</li>
-                            </ul>
-                            <p class="program_mem">From $100/ month.</p>
-                        </div>
-                        <button>Coming Soon</button>
-                    </div>
-                </div>
-            </div>
-            <div class="programs_status">
-                <div class="programs_real"></div>
             </div>
         </div>
-        
     </section>
     <!-- programs section end -->
 
@@ -328,41 +296,6 @@
 <script src="assets/javascript/select-box.js"></script>
 <script>
     $(document).ready(function(){
-        $(window).scroll(function (event) {
-            if($(window).width() > 1024){
-                var scroll = $(window).scrollTop();
-                    console.log(scroll);
-                //to stop the screen scrolling
-                if((scroll < 3320) && (scroll > 1560)){
-                    $(".programs").css({"position":"fixed","top":"0px"});
-                    $(".region").css("margin-top","2200px");
-                    $(".programs").css("margin-top","0px");
-                }else if (scroll > 3320){
-                    $(".programs").css("position","initial");
-                    $(".programs").css("margin-top","1200px");
-                    $(".region").css("margin-top","0px");
-                } else if (scroll < 1560){
-                    $(".programs").css("position","initial");
-                    $(".region").css("margin-top","0px");
-                    $(".programs").css("margin-top","0px");
-                }
-                //to make a slider 
-                if((scroll > 1560) && (scroll < 2000)){
-                    $(".programs_content").css("left","0");
-                    $(".programs_real").css("width","130px");
-                }
-                if((scroll > 2440) && (scroll < 2880)){
-                    event.preventDefault();
-                    $(".programs_content").css("left","-100%");
-                    $(".programs_real").css("width","260px");
-                }
-                if((scroll > 2880) && (scroll < 3320)){
-                    event.preventDefault();
-                    $(".programs_content").css("left","-200%");
-                    $(".programs_real").css("width","390px");
-                }
-            }
-        });
 
         $('select').customSelectBox().change(function(){
             $(".region_right button").css("background", "#FF8F2F");

@@ -5,9 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/css/common.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/about.css">
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/about.css"> -->
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/about.css">
 </head>
 <body>
     <!-- header section start -->
@@ -252,22 +253,77 @@
     </section>
 
     <!-- vision section start -->
-    <section class="vision" data-scroll-num="1">
-        <div class="how-section how-section-1 show">
-            <p class="vision_title">Our vision</p>
-            <p class="vision_text">1To use modern technology to provide you with world-class movement treatment in the comfort of your home. No commuting, no waiting rooms, just physiotherapy.</p>
-        </div>
-        <div class="how-section how-section-2">
-            <p class="vision_title">Our vision</p>
-            <p class="vision_text">Technology to provide you with world-class movement treatment in the comfort of your home. No commuting, no waiting rooms, just physiotherapy.</p>
-        </div>
-        <div class="how-section how-section-3">
-            <p class="vision_title">Our vision</p>
-            <p class="vision_text">To provide you with world-class movement treatment in the comfort of your home. No commuting, no waiting rooms, just physiotherapy.</p>
-        </div>
-        <div class="vision_prog">
-            <div class="vision_real"></div>
-        </div>
+    <!-- <section class="vision">
+        <section class="testimonials">
+            <div id="customers-testimonials" class="owl-carousel">
+                <div class="item">
+                    <div class="shadow-effect">
+                        <div class="item-image">
+                            <img src="assets/images/how_ipad_1.png" >
+                        </div>    
+                        <div class="item-details">
+                            <div class="title">1. Purchase the program</div>
+                            <p class="content">This program includes an online consultation with a qualified therapist, and a set of clear video instructions for highly effective lower back exercises.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="shadow-effect">
+                        <div class="item-image">
+                            <img src="assets/images/how_ipad_1.png" >
+                        </div>    
+                        <div class="item-details">
+                            <div class="title">2. Book a consultation</div>
+                            <p class="content">Based on a one-on-one consultation with our expert, we will design a unique exercise program targeting your specific lower back problems. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="shadow-effect">
+                        <div class="item-image">
+                            <img src="assets/images/how_ipad_1.png" >
+                        </div>    
+                        <div class="item-details">
+                            <div class="title">3. Begin your therapy</div>
+                            <p class="content">We will provide you with a custom-made set of precise instructions and exercise, which you will complete in the comfort of your home. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </section>
+    </section> -->
+
+    <section class="how">
+        <section class="testimonials">
+                <div id="customers-testimonials" class="owl-carousel">
+                    <div class="item">
+                        <div class="shadow-effect">
+                            <div class="item-details">
+                                <div class="title">Our vision</div>
+                                <p class="content">To use modern technology to provide you with world-class movement treatment in the comfort of your home. No commuting, no waiting rooms, just physiotherapy.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="shadow-effect">
+                            <div class="item-details">
+                                <div class="title">mission</div>
+                                <p class="content">To provide you with an easier, more convenient way to physical wellbeing, injury recovery and life free of pain. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="shadow-effect">
+                            <div class="item-details">
+                                <div class="title">Our goal</div>
+                                <p class="content">To provide you with easy to follow, precise instruction, in order to make personalized physical therapy treatments easy to do at home.  </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </section>
     </section>
 
     <!-- moving section start -->
@@ -319,6 +375,7 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="assets/javascript/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <!-- <script type="text/javascript" src="assets/javascript/custom_carousel.js"></script> -->
 <script src="assets/javascript/select-box.js"></script>
 <script>
@@ -339,12 +396,12 @@
         })
 
         //mobile belief tab section
-        $('.belief_mob .mob_tabs:not(:first)').addClass('inactive');
+        // $('.belief_mob .mob_tabs:not(:first)').addClass('inactive');
         $('.mob_contents').hide();
         $('.mob_contents:first').show();
         $('.belief_mob .mob_tabs').click(function(){
             var t = $(this).children('.mob_contents');
-            $('.belief_mob .mob_tabs').addClass('inactive');        
+            // $('.belief_mob .mob_tabs').addClass('inactive');        
             $(this).removeClass('inactive');
             $(".mob_title").css("color","#fff");
             $(".mob_title img").attr("src","assets/images/tab_cl.png");
@@ -354,74 +411,30 @@
             $(t).fadeIn('slow');
             return false;
         })
-    });
 
-    function getPosition(element) {
-        var xPosition = 0;
-        var yPosition = 0;
-
-        while(element) {
-            xPosition += (element.offsetLeft - element.scrollLeft + element.clientLeft);
-            yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
-            element = element.offsetParent;
-        }
-
-        return { x: xPosition, y: yPosition };
-    }
-    $(document).ready(function(){
-
-        var how = document.querySelector('.vision');
-        var how_ele = how.getBoundingClientRect();
-        var ele_top = getPosition(how);
-        var last_scroll = 0;
-
-        $(window).scroll(function(e){
-            var current_scroll = $(window).scrollTop();
-            var delta_scroll = current_scroll - last_scroll;
-            
-            if(current_scroll > ele_top.y && current_scroll < (ele_top.y + 1200)){
-                $(how).addClass("fixed")
-                if(delta_scroll > 0){
-                    var current_scroll_num = Number($(how).attr('data-scroll-num'))
-                    $('.vision_real').css("transform", `scaleX(${current_scroll_num / 3})`)
-                    $('.how-section').removeClass('show')
-                    $(`.how-section-${current_scroll_num}`).addClass('show')
-                    var marginTop = `${current_scroll + how_ele.height - ele_top.y}px`
-                    // console.log(marginTop)
-                    $('.moving').css('margin-top', marginTop)
-                    if(current_scroll + how_ele.height - ele_top.y > 1000)
-                        if(current_scroll_num < 3) $(how).attr('data-scroll-num', 2)
-                    if(current_scroll + how_ele.height - ele_top.y > 1400)
-                        if(current_scroll_num < 3) $(how).attr('data-scroll-num', 3)
-                } else {
-                    var current_scroll_num = Number($(how).attr('data-scroll-num'))
-                    $('.vision_real').css("transform", `scaleX(${current_scroll_num / 3})`)
-                    $('.how-section').removeClass('show')
-                    $(`.how-section-${current_scroll_num}`).addClass('show')
-                    var marginTop = `${current_scroll + how_ele.height - ele_top.y}px`
-                    // console.log(marginTop)
-                    $('.moving').css('margin-top', marginTop)
-                    if(current_scroll + how_ele.height - ele_top.y > 600)
-                        if(current_scroll_num > 0) $(how).attr('data-scroll-num', 1)
-                    if(current_scroll + how_ele.height - ele_top.y > 1000)
-                        if(current_scroll_num > 1) $(how).attr('data-scroll-num', 2)
-                    if(current_scroll + how_ele.height - ele_top.y > 1400)
-                        if(current_scroll_num > 1) $(how).attr('data-scroll-num', 3)
+        $('#customers-testimonials').owlCarousel( {
+            loop: false,
+            center: true,
+            items: 1,
+            margin: 50,
+            autoplay: false,
+            dots:true,
+            nav:true,
+            // autoplayTimeout: 8500,
+            // smartSpeed: 450,
+            navText: ['<img src = "assets/images/circle_prev.png"/>','<img src = "assets/images/circle_next.png"/>'],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 1
+                },
+                1170: {
+                    items: 1
                 }
-                $(how).css("margin-top","0px");
-            } else {
-                $(how).removeClass("fixed")
-                    $('.moving').css('margin-top', '0px')
-            }
-            if(current_scroll>ele_top.y + 1200){
-                $('.vision').css("margin-top","1200px");
-            }
-            if(current_scroll<ele_top.y ){
-                $('.vision').css("margin-top","0px");
-            }
-            last_scroll = current_scroll;
-        })
-
+            },
+        });
     });
 </script>
 </html>
