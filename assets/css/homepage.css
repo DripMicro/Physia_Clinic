@@ -67,6 +67,9 @@
     position: relative;
     z-index: -1;
 }
+.pain_video .pain_video_back{
+    width: 744px;
+}
 .pain_play{
     position: absolute;
     top: 50%;
@@ -110,6 +113,10 @@
 }
 .program_img{
     position: relative;
+    width: 50%;
+}
+.program_img img{
+    width: 100%;
 }
 .program_link{
     display: none;
@@ -133,6 +140,8 @@
 }
 .program_1_right{
     padding-left: 75px;
+    width: 50%;
+    margin: auto;
 }
 .program_1 button{
     width: 160px;
@@ -152,6 +161,7 @@
 }
 .program_2_left{
     max-width: 382px;
+    margin: auto 0;
 }
 .program_2 button{
     width: 160px;
@@ -169,6 +179,8 @@
 }
 .program_3_right{
     padding-left: 75px;
+    width: 50%;
+    margin: auto;
 }
 .program_3 button{
     width: 160px;
@@ -598,7 +610,7 @@
     .pain_btn button{
         margin: 50px 0;
     }
-    .pain_video img{
+    .pain_video .pain_video_back{
         width: 100%;
     }
 
@@ -612,12 +624,16 @@
     .program_link{
         display: block;
     }
+    .program_img{
+        width: 100%;
+    }
     .program_img img{
         width: 100%;
     }
     .program_1_right, .program_3_right{
         padding-left: 0;
         text-align: center;
+        
     }
     .program_title{
         display: none;

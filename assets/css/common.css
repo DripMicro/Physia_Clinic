@@ -198,6 +198,9 @@ a{
     overflow: hidden;
     transition: 0.5s;
 }
+.nav_our_detail .nav_pro a{
+    opacity: 0.5;
+}
 .navbar_hover{
     height: 0;
     overflow: hidden;
@@ -233,6 +236,9 @@ a{
     margin: 0;
     border-bottom: 2px solid #36ACFC;
     width: fit-content;
+}
+.nav_2 p, .nav_3 p{
+    opacity: 0.5;
 }
 .nav_2 span, .nav_3 span{
     padding-left: 18px;

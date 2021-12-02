@@ -15,7 +15,7 @@
     background-position: center center;
 }
 .hero_content{
-    padding: 160px 64px;
+    padding: 250px 64px;
 }
 .hero_title{
     font-size: 26px;
@@ -190,6 +190,9 @@
     justify-content: center;
     align-items: center;
 }
+.include_card img{
+    width: 100px;
+}
 .include_title{
     margin-top: 20px;
     line-height: 35px;
@@ -317,6 +320,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.member_card img{
+    height: 45px;
 }
 .mem_name{
     margin-bottom: 13px;

@@ -391,6 +391,7 @@ color: #2D468D;
 }
 .booking_content{
     padding: 0 65px;
+    margin-bottom: 60px;
 }
 .book_bal{
     display: flex;
@@ -400,7 +401,8 @@ color: #2D468D;
     margin-right: 65px;
 }
 .book_title{
-    margin-top: 26px;
+    margin-top: 30px;
+    margin-bottom: 10px;
     font-size: 20px;
     line-height: 50px;
     text-align: center;
@@ -418,12 +420,60 @@ color: #2D468D;
     line-height: 22px;
     color: #2D468D;
 }
+.your_balance{
+    background-color: #5A95CB;
+}
+.your_balance .booking_content{
+    display: flex;
+    color: white;
+    padding: 46px 0px;
+}
+.your_balance .image, .your_balance_main{
+    width: 50%;
+}
+.your_balance .image img{
+    height: 100%;
+    width: 200px;
+}
+.your_balance_main{
+    margin: auto;
+    line-height: 4;
+}
+.your_balance_main button{
+    background: #FF8F2F;
+    color: #fff;
+    box-shadow: 0px 4px 25px rgb(0 0 0 / 25%);
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 25px;
+    width: 160px;
+    height: 50px;
+    border: 1px solid #FF8F2F;
+    border-radius: 5px;
+}
+.your_balance_main .title{
+    font-size: 20px;
+}
+.your_balance_main .content{
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+.your_balance_main img{
+    display: none;
+    width: 200px;
+}
+.your_balance_main .price{
+    font-size: 24px;
+}
 .balance{
     width: calc(50% - 65px);
     margin-left: 65px;
 }
 .bal_title{
-    margin-top: 26px;
+    margin-top: 30px;
+    margin-bottom: 10px;
     font-size: 20px;
     line-height: 50px;
     text-align: center;
@@ -449,6 +499,7 @@ color: #2D468D;
     line-height: 22px;
     text-align: center;
     color: #2D468D;
+    padding-bottom: 150px;
 }
 .bal_avail span{
     padding-left: 10px;
@@ -470,7 +521,7 @@ color: #2D468D;
 }
 
 .balance_title{
-    margin-top: 64px;
+    margin-bottom: 30px;
     font-size: 20px;
     line-height: 50px;
     text-align: center;
@@ -483,6 +534,7 @@ color: #2D468D;
     color: #FFFFFF;
 }
 .member_items{
+    margin-bottom: 80px;
     display: flex;
     justify-content: space-between;
 }
@@ -490,25 +542,23 @@ color: #2D468D;
     box-shadow: 0px 4px 25px rgba(45, 70, 141, 0.25);
 }
 .member_items div:first-child button{
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
     background: #FF8F2F;
     color: #fff;
-    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
-}
-.member_items div:nth-child(2) button{
-    background: #FF8F2F;
-    color: #fff;
-    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
 }
 .member_card{
-    margin-left: 10px;
+    margin-left: 20px;
     padding: 13px 16px;
-    max-width: 209px;
+    min-width: 209px;
     min-height: 512px;
     background: #F8F8F8;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.member_card img{
+    height: 45px;
 }
 .mem_name{
     margin-bottom: 13px;
@@ -543,7 +593,7 @@ color: #2D468D;
     border-radius: 5px;
 }
 .mem_cardtext{
-    margin-top: 30px;
+    margin-top: 20px;
     width: 100%;
     display: flex;
     font-size: 12px;
@@ -557,6 +607,9 @@ color: #2D468D;
     font-size: 12px;
     line-height: 20px;
     color: #2D468D;
+}
+.mem_cardtext span b{
+    font-weight: bold;
 }
 .card_ruby, .card_plus{
     box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
@@ -810,6 +863,26 @@ color: #2D468D;
         margin-top: 47px;
         width: auto;
     }
+    .bal_title{
+        margin-top: 0px;
+    }
+    .your_balance{
+        padding: 0 43px;
+    }
+    .your_balance .image{
+        width: 0%;
+    }
+    .your_balance .your_balance_main{
+        width: 100%;
+        text-align: center;
+    }
+    .your_balance_main img{
+        display: block;
+        margin: auto;
+    }
+    .your_balance .image img{
+        display: none;
+    }
     .balance_main{
         width: 384px;
     }
@@ -843,6 +916,13 @@ color: #2D468D;
     .tabs{
         justify-content: space-between;
         overflow-x: scroll;
+    }
+}
+@media(min-width:900px){
+    .member_items, .your_balance .booking_content{
+        max-width: 785px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 @media(max-width:599px){
@@ -902,6 +982,9 @@ color: #2D468D;
     .book_title, .bal_title{
         font-size: 18px;
     }
+    .booking_main{
+        padding-bottom: 450px;
+    }
     .bal_text{
         margin-top: 40px;
     }
@@ -913,6 +996,12 @@ color: #2D468D;
         line-height: 25px;
         margin-top: 20px;
         margin-bottom: 40px;
+    }
+    .bal_avail{
+        padding-bottom: 350px;
+    }
+    .your_balance{
+        padding: 0 20px;
     }
 
     .stage1_top p:first-child {
